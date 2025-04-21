@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primarycolor:#363232 ;
+  --secondarycolor: #f4b5eb;
+  --thirdcolor: #eea1e3;
+}
+
+body {
+  background: linear-gradient(var(--primarycolor), black);
+}
+
+#navbar {
+  display: flex; 
+  justify-content: flex-end;
+  align-items: center;
+  height: 100px;
+  background: var(--secondarycolor);
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 10px;
+  z-index: 1000;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  margin: 0;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin: 5px;
+  padding: 2px;
+}
+
+nav ul li {
+  display: flex;
+  align-items: inline-flex;
+}
+
+li a {
+display: inline-flex;
+justify-content: center; 
+align-items: center;
+width: 50px; height: 50px;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.2);
+border: 2px solid var(--thirdcolor);
+text-decoration: none;
+font-size: 1rem;
+transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--thirdcolor);
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px transparent black;
+  border-radius: 20%;
+  font-size: 1rem;
+}
+
+#welcome-section {
+  height: 100vh;
+}
+
+@media only screen and (max-width:600px) {
+  
+}
