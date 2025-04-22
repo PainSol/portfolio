@@ -5,8 +5,11 @@
 
 :root {
   --primarycolor:#363232 ;
-  --secondarycolor: #f4b5eb;
-  --thirdcolor: #eea1e3;
+  --secondarycolor: #cac5ed;
+  --thirdcolor: #dfcff3;
+  --fourthcolor: #f0c3e2;
+  --fifthcolor: #514283;
+  --sixthcolor: #e1ddf4;
 }
 
 body {
@@ -64,7 +67,7 @@ transition: all 0.3s ease;
 }
 
 a:hover {
-  color: var(--thirdcolor);
+  color: var(--fourthcolor);
   background: rgba(0, 0, 0, 0.8);
   border: 2px transparent black;
   border-radius: 20%;
@@ -73,8 +76,186 @@ a:hover {
 
 #welcome-section {
   height: 100vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
 }
 
-@media only screen and (max-width:600px) {
-  
+.title {
+  font-size: 80px;
+  background-color: transparent;
+  color: var(--secondarycolor);
+}
+
+#welcome-section, p {
+  color: var(--secondarycolor);
+  font-size: 25px;
+}
+
+#welcome-section .title:hover, #welcome-section p:hover {
+  color: var(--forthcolor);
+  transform: scale(1.05);
+  border-left: 1px solid var(--forthcolor);
+  border-right: 1px solid var(--forthcolor);
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--primarycolor)
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  font-size: 75px;
+  font-weight: bold;
+  color: var(--thirdcolor);
+}
+
+#sub-title {
+  font-size: 30px;
+  margin-bottom: 150px;
+  color: var(--thirdcolor);
+}
+
+#projects .project-description {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: var(var(--sixthcolor));
+  margin-top: 20px;
+}
+
+.project-title {
+  color: var(--fourthcolor);
+  position: relative;
+  top: -20px;
+  font-weight: bold;
+  max-width: 90%;
+  height: auto;
+  justify-content: flex-start;
+  border-bottom: 2px solid rgba(225, 221, 244, 0.8);
+}
+
+.github-link {
+    color: var(--secondarycolor);
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 10;
+    display: inline-block; 
+    padding: 5px 10px; 
+}
+
+.github-link:hover {
+  background: none;
+  color: var(--thirdcolor);
+  border: 2px solid var(--secondarycolor);
+  border-radius: 0%;
+}
+
+a[class="github-link"] {
+  border-bottom: 1px solid var(--fifthcolor);
+}
+
+div {
+    border: 4px transparent;
+    padding: 20px 10px;
+    border-radius: 20px;
+    width: 700px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
+    position: relative;
+}
+
+img {
+  width: auto;
+  height: 300px;
+  border: transparent;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    #navbar {
+        height: 60px;
+        padding: 5px;
+    }
+    .links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+        border-width: 1px; 
+    }
+    nav ul {
+        gap: 10px; 
+        padding: 1%;
+    }
+    #welcome-section {
+        padding: 20px;
+        gap: 10px;
+    }
+    #welcome-section .title {
+        font-size: 2.5rem; */
+    }
+    #welcome-section p {
+        font-size: 1.2rem; 
+    }
+    #projects {
+        padding: 20px 10px;
+    }
+    #projects .title {
+        font-size: 2.5rem; 
+    }
+    #sub-title {
+        font-size: 1.2rem;
+        margin-bottom: 50px; 
+    }
+    .project-tile {
+        width: 100%;
+        padding: 15px 5px;
+        margin: 10px 0;
+    }
+    .project-title {
+        font-size: 1.2rem;
+        top: -10px; 
+    }
+    .project-description {
+        font-size: 0.9rem;
+        max-height: 100px; 
+        overflow-y: auto;
+    }
+    .github-link {
+        font-size: 14px;
+        padding: 5px 8px; 
+    }
+    img.project-img {
+        height: 200px; 
+    }
+    
+    #welcome-section .title:hover, #welcome-section p:hover, .github-link:hover, .project-title:hover {
+        transform: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .project-tile {
+        background: rgba(225, 221, 244, 0.9);
+    }
 }
